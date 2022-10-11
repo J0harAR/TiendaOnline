@@ -10,4 +10,4 @@ def categoria(request,categoria_id):
     posts=post.objects.filter(categorias=categoria)
     return render(request,"blog/categorias.html",{"categoria":categoria,"posts":posts})
 
-#se hizo un cambio
+#agregue el cambio en la lap
