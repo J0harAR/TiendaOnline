@@ -9,3 +9,5 @@ def categoria(request,categoria_id):
     categoria=Categoria.objects.get(id=categoria_id)
     posts=post.objects.filter(categorias=categoria)
     return render(request,"blog/categorias.html",{"categoria":categoria,"posts":posts})
+
+#se hizo un cambio
