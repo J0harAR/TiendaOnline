@@ -1,5 +1,9 @@
 {% extends "app/base.html" %}
 {% load static %}
 {% block content %}
-    <table>{{miFormulario.as_table}}</table>
+
+    <div class="contenedorFormulario">
+        <table>{{miFormulario.as_table}}</table>
+    </div>
+   
 {% endblock %}

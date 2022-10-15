@@ -4,10 +4,10 @@ from blog.models import post,Categoria
 # Create your views here.
 def blog(request):
     posts=post.objects.all()
-    return render(request,'blog/blog.html',{"posts":posts})
+    categorias=Categoria.objects.all()
+    return render(request,'blog/blog.html',{"posts":posts,"categoriasFiltro":categorias})
 def categoria(request,categoria_id):
     categoria=Categoria.objects.get(id=categoria_id)
+    categorias=Categoria.objects.all()
     posts=post.objects.filter(categorias=categoria)
-    return render(request,"blog/categorias.html",{"categoria":categoria,"posts":posts})
-
-#agregue el cambio en la lap
+    return render(request,"blog/categorias.html",{"categoria":categoria,"posts":posts,"categoriasFiltro":categorias})

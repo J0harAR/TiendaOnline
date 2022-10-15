@@ -2,6 +2,11 @@
 {% load static %}
 {% block content %}
 {% for post in posts %}
+
+
+
+ 
+
 <section class="page-section clearfix">
     <div class="container">
       <div class="intro">
@@ -27,19 +32,17 @@
     <div style="width: 75%;margin: auto; text-align: center; color: white;">
         
         Categorias:
-        {% for post in posts %}
-        
-            {% for categoria in post.categorias.all %}
+    
+            {% for categoria in categoriasFiltro %}
                 
             <a href="{% url 'categoria' categoria.id %}">{{categoria.nombre}}</a>&nbsp;&nbsp;&nbsp;
 
-
-
             {% endfor %}
-
-        {% endfor %}
-
     </div>
+  
 </section>
+
+
+
 
 {% endblock %}
