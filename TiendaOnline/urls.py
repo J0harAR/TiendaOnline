@@ -18,6 +18,7 @@ from django.urls import include, path
 
 from servicios.views import servicios
 from blog.views import blog
+from tienda.views import tienda
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,4 +26,5 @@ urlpatterns = [
     path('servicios/',include('servicios.urls')),
     path('blog/',include('blog.urls')),
     path('contacto/',include('contacto.urls')),
+    path('tienda/',include('tienda.urls')),
 ]
