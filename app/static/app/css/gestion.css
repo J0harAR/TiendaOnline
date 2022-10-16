@@ -280,5 +280,7 @@ ul.errorlist{
 
 .contenedorFormulario{
   background-color: rgba(24, 64, 8, 0.8);
+  width:50%;
+  margin:10px auto;
   
 }
