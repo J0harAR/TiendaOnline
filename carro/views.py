@@ -1,5 +1,3 @@
-from math import prod
-import re
 from django.shortcuts import render
 from .Carro import Carro
 from tienda.models import Producto
