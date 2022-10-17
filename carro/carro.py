@@ -5,8 +5,8 @@ class Carro:
         carro=self.session.get("carro")
         if not carro:
             carro=self.session["carro"]={}
-        else:
-            self.carro=carro#Rescatar el carro si se cambia de pestaña
+        #else:
+        self.carro=carro#Rescatar el carro si se cambia de pestaña
     def agregar(self,producto):
         if(str(producto.id)not in self.carro.keys()):#Producto no esta en el carro
             self.carro[producto.id]={
