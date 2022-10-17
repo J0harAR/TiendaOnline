@@ -2,11 +2,11 @@
 from django.urls import path
 from app import views
 from django.conf.urls.static import static
-from . import views
+from .views import VRegistro
 
 urlpatterns = [
    
-    path('',views.autenticacion,name="Autenticacion"),  
+    path('',VRegistro.as_view(),name="Autenticacion"),  
 ]
 
 
